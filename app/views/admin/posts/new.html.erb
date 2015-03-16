@@ -1,0 +1,84 @@
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <%= render 'common/top' %>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <%= render 'admin/backend/menu' %>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+    <div id="page-wrapper">
+
+      <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 class="page-header">
+                      文章管理
+                  </h1>
+                  <ol class="breadcrumb">
+                  		<li>
+                  			<%= link_to admin_posts_path do %>
+                  				<i class="fa fa-dashboard">文章管理</i>
+                  			<% end %>
+                  		</li>
+                      <li class="active">
+                         <i class="icon glyphicon glyphicon-pushpin"></i> 新增文章
+                      </li>
+                  </ol>
+              </div>
+          </div>
+
+          <!-- /.row -->
+
+					<div class="row">
+            <div class="col-lg-6">
+              <%= bootstrap_form_for @post do |n| %>
+                <div class="form-group">
+                    <%= n.text_field :title, :class => "form-control" %>
+                    <%= n.text_area :content, :class => "redactor", :rows => 40, :cols => 120 %>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h1>Disabled Form States</h1>
+
+                    <fieldset disabled>
+
+                        <div class="form-group">
+                            <label for="disabledSelect">Disabled input</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="disabledSelect">Disabled select menu</label>
+                            <select id="disabledSelect" class="form-control">
+                                <option>Disabled select</option>
+                            </select>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">Disabled Checkbox
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Disabled Button</button>
+
+                    </fieldset>
+
+                <% end %>
+
+            </div>
+          </div>
+          <!-- /.row -->
+
+      </div>
+      <!-- /.container-fluid -->
+
+  </div>
+  <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->

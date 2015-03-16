@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+//= require bootstrap
+//= require redactor-rails
+//= require raphael
+//= require morris
+//= require jquery.flot
+//= require jquery.flot.resize

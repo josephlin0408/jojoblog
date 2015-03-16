@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 # Add 
 gem 'bootstrap-sass-rails'
 gem 'font-awesome-rails'
+gem 'morrisjs-rails'
+gem 'raphael-rails'
+gem "flot-rails"
 gem 'bootstrap_form'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'redactor-rails'

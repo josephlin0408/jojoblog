@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+
+  #帳號管理
+  devise_for :users
+
+  #前台顯示
+  resources :posts
+    root 'posts#index'
+
+  #後台管理
+  namespace :admin do
+    root 'posts#index'
+    resources :posts
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
